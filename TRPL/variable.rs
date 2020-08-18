@@ -6,6 +6,7 @@ fn main(){
     immutable_variable();
     mutable_variable();
     constants();
+    shadow();
 }
 
 /*
@@ -45,7 +46,6 @@ fn mutable_variable(){
  * > 5. 常量一般用大写字母+下划线的格式命名。并且可以在数字中加入下划线来提高可读性。
  * 
  */
-
  fn constants(){
      const PI:f64 = 3.1415926;
      println!("PI = {}", PI);
@@ -54,6 +54,26 @@ fn mutable_variable(){
      println!("银行账户的金额 = {}",MONEY_ACCOUNT );
  }
 
+
+
+/*
+ * 2. 在开发中，有时候我们可以能需要修改变量的类型(Oh,shit,糟糕的体验，应该尽量避免)。
+ * In Rust, 这种行为被称为『Shadow』遮盖行为。即：后面的变量将前面的变量给遮盖隐藏啦。
+ * 
+ * 你可能又会联系到关键字mut。两者有何区别呢？
+ * 
+ * 首先，使用关键字mut修饰的变量，我们不清楚其最终的状态(因为随时随地可能被改变)，而使用shadow这种方式则大可不必担心，因为还是用let修饰的，默认不可变。
+ * 另外，shadow方式可以适用于修改变量类型的情况。
+ * 
+ */
+fn shadow(){
+  let letters = "I love rust";
+  println!("letters = {}",letters );
+
+  // 现在我们需要获取该文本的长度.(有时候我们没有必要另起变量名)
+  let letters = letters.len();
+  println!("letters's length = {}",letters );
+}
 
 
 
