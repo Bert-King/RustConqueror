@@ -1,3 +1,11 @@
+
+/**
+ * 对于Rust中的函数，我们需要注意几点：
+ * 1. 关键字是fn；
+ * 2. 如果定义函数为有返回值的，那么函数的最后一行必须是表达式或者return语句。(表达式不带分号)
+ * 3. 函数命名规范snake_case.所有字母小写，单词之间用下划线隔开。
+ * (Rust code uses snake case as the conventional style for function and variable names. In snake case, all letters are lowercase and underscores separate words. )
+ */
 fn main(){
     without_parameters();
 
