@@ -3,7 +3,7 @@
  * @version: 
  * @Date: 2020-08-19 11:01:08
  * @LastEditors: BertKing
- * @LastEditTime: 2020-08-19 11:43:38
+ * @LastEditTime: 2020-08-19 11:46:39
  * @FilePath: /RustConqueror/RBE/control_flow_loop.rs
  * @Description: Rust的loop(嵌套)循环
  * 
@@ -81,6 +81,9 @@ fn nested_loop(){
 
 
 /**
+ * One of the uses of a loop is to retry an operation until it succeeds.
+ * (循环的用途之一是重试操作，直到操作成功为止。)
+ * 
  * 满足一定条件时，退出循环并返回值。
  * In Rust,我们可以通过将返回值放在break之后来达到此目的。
  */
