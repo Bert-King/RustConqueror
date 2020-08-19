@@ -3,14 +3,14 @@
  * @version: 
  * @Date: 2020-08-19 10:06:13
  * @LastEditors: BertKing
- * @LastEditTime: 2020-08-19 10:26:20
+ * @LastEditTime: 2020-08-19 11:42:55
  * @FilePath: /RustConqueror/RBE/control_flow_if_else.rs
  * @Description: if_else语句的讲解
  * 
  * Branching with if-else is similar to other languages. 
  * Unlike many of them,the boolean condition doesn't need to be surrounded by parentheses,and each condition is followed by a block.
  * if-else conditionals are expressions,and, all branches must return the same type.
- * 私以为这几句话足以概括Rust的if-else语句。(对有其它编程语言经验者而言)
+ * 私以为这几句话足以概括Rust的if-else表达式。(对有其它编程语言经验者而言)
  * 
  * 理解expressions and statements 对于理解Rust真的很有帮助哦。
  * 
