@@ -3,7 +3,7 @@
  * @version: 
  * @Date: 2020-08-19 20:50:19
  * @LastEditors: BertKing
- * @LastEditTime: 2020-08-19 21:04:04
+ * @LastEditTime: 2020-08-20 10:29:58
  * @FilePath: /RustConqueror/TRPL/tuples.rs
  * @Description: Rust的元组(Tuple)
  * 
@@ -17,10 +17,10 @@
  * 1. 固定长度；
  * 2. 类型不固定；
  * 3. 使用parentheses();
- * 4. 分配在Stack上。
+ * 4. 分配在Stack上(仅限于元素类型都是基本类型的情况下)。
  * 5. 元组的访问：(两种方式：模式匹配和下标) 
- *
  * 
+ * 阅读并理解Ownership相关内容之后，将会进一步加深对Tuple的理解。
  */
 fn main(){
     // 1. 声明元组
