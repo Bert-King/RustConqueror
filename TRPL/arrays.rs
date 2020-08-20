@@ -3,7 +3,7 @@
  * @version: 
  * @Date: 2020-08-19 21:05:14
  * @LastEditors: BertKing
- * @LastEditTime: 2020-08-20 11:27:34
+ * @LastEditTime: 2020-08-20 11:46:27
  * @FilePath: /RustConqueror/TRPL/arrays.rs
  * @Description: Rust的数组
  * 数组方面的内容和其它编程语言基本相同。
@@ -42,10 +42,21 @@
      
     let zeros = [0;5];// 等价于 [0,0,0,0,0]
 
+    zeros[0] = 1;
+    println!("{}",zeros[0] );
+
     println!(" 星期三 =  {}", days[2]);
-
     println!(" 星期八 ？ {}", days[7]);// 编译期间就可以发现数组越界，就问你强不强：index out of bounds:
+ }
 
+
+ /**
+  * 虽然数组的长度不可变，但是我们可以通过关键字mut来修改数组中的元素(RBE 和 TRPL都没提到这点，应该是不推荐吧)
+  */
+ fn change_array(){
+    let mut zeros = [0;5];// 等价于 [0,0,0,0,0]
+    zeros[0] = 1;
+    println!("{}",zeros[0]);
  }
 
  
