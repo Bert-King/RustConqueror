@@ -3,8 +3,8 @@
  * @version: 
  * @Date: 2020-08-20 16:02:53
  * @LastEditors: BertKing
- * @LastEditTime: 2020-08-21 15:12:17
- * @FilePath: /RustConqueror/RBE/modules.rs
+ * @LastEditTime: 2020-08-21 17:34:21
+ * @FilePath: /RustConqueror/RBE/module_and_visibility.rs
  * @Description: Rust的模块(感觉跟JS的差不多,跟Java相去甚远)
  * 
  * 模块这个概念，对于有其他经验的开发者绝对不会陌生。
@@ -15,6 +15,10 @@
  * 这里对于Crate补充一点：
  *  RBE上面的说明是完全符合Rust文档的。什么是Crate?
  * --------------------------------------------
+ * 
+ * 模块的主要作用：
+ * 1. 控制作用域的范围；
+ * 2. 访问权限控制；
  * 
  * 使用mod来显式地声明一个Module。
  * 需要注意的是:一个.rs文件默认情况下有一个匿名的Module。
