@@ -3,7 +3,7 @@
  * @version: 
  * @Date: 2020-08-24 16:22:44
  * @LastEditors: BertKing
- * @LastEditTime: 2020-08-24 20:08:46
+ * @LastEditTime: 2020-08-24 20:14:43
  * @FilePath: /RustConqueror/TRPL/error_handling.rs
  * @Description: Rust的错误处理
  * In many cases, Rust requires you to acknowledge the possibility of an error and take some action before your code will compile.
@@ -12,6 +12,11 @@
  * Rust将错误分为两类:
  * 1. recoverable ---》 Result<T,E>;
  * 2. unrecoverable ---》 panic! 宏(停止运行); index out of bounds
+ * 
+ * 我们在写代码的时候如何决定选择返回Result? 还是 panic! ?
+ * 
+ * 通常情况下，返回Result将会是一个好的选择。极少情况下，才会用panic!.
+ * 
  * 
  * 
  *  What you need to know right now is that T represents the type of the value that will be returned in a success case within the Ok variant, 
