@@ -3,7 +3,7 @@
  * @version: 
  * @Date: 2020-08-24 16:22:44
  * @LastEditors: BertKing
- * @LastEditTime: 2020-08-24 20:14:43
+ * @LastEditTime: 2020-08-24 20:55:56
  * @FilePath: /RustConqueror/TRPL/error_handling.rs
  * @Description: Rust的错误处理
  * In many cases, Rust requires you to acknowledge the possibility of an error and take some action before your code will compile.
@@ -27,13 +27,17 @@
 
  use std::fs::File;
  use std::io::{self,ErrorKind,Read};
+ use std::env;
 fn main(){
    // panic!("crash and burn");
 
    //let v = vec![1,2,3];
   // v[99];
 
-  error_handling_unwrap();
+  let args:Vec<String> = env::args().collect();
+  println!("{:?}",args);
+
+//   error_handling_unwrap();
 
 }
 
@@ -91,7 +95,7 @@ fn read_username_from_file() -> Result<String,io::Error> {
     let mut s = String::new();
 
     match f.read_to_string(&mut s) {
-        OK(_) => Ok(s),
+        Ok(_) => Ok(s),
         Err(e) => Err(e),
     }
 }
