@@ -17,3 +17,5 @@ A language empowering everyone to build reliable and efficient software.
 Rust非常有意思，推荐的学习资料只有一个：[Rust官网](https://www.rust-lang.org/) Or [Rust中文官网](https://www.rust-lang.org/zh-CN/)
 
 > Julia , Erlang , Rust这些语言的官方文档真的是让人感动... 
+
+对于Rust学习的一点建议：
