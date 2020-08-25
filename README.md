@@ -3,7 +3,7 @@
  * @version: 
  * @Date: 2020-08-17 20:05:47
  * @LastEditors: BertKing
- * @LastEditTime: 2020-08-18 20:13:56
+ * @LastEditTime: 2020-08-25 10:11:10
  * @FilePath: /RustConqueror/README.md
  * @Description: 
 -->
@@ -19,3 +19,7 @@ Rust非常有意思，推荐的学习资料只有一个：[Rust官网](https://w
 > Julia , Erlang , Rust这些语言的官方文档真的是让人感动... 
 
 对于Rust学习的一点建议：
+
+注意这些名词：
+1. destructor
+2. dereference
