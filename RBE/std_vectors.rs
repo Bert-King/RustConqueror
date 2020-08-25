@@ -3,7 +3,7 @@
  * @version: 
  * @Date: 2020-08-25 10:52:36
  * @LastEditors: BertKing
- * @LastEditTime: 2020-08-25 11:59:12
+ * @LastEditTime: 2020-08-25 14:03:00
  * @FilePath: /RustConqueror/RBE/std_vectors.rs
  * @Description: 标准库中的Vector
  * 
@@ -38,9 +38,20 @@
     }
 
     println!();
+    /**
+     * 带下标的遍历
+     */
     for (i,x) in xs.iter().enumerate(){
         println!("In position {} we have value {}",i,x);
     }
+
+    /**
+     * 由于item_mut()。我们可以在遍历过程中修改元素
+     */
+    for x in xs.iter_mut(){
+        *x *= 2;
+    }
+    println!("Updated vector:{:?}",xs);
 
 
  }
