@@ -21,5 +21,5 @@ Rust非常有意思，推荐的学习资料只有一个：[Rust官网](https://w
 对于Rust学习的一点建议：
 
 注意这些名词：
-1. destructor
-2. dereference
+1. destructor:解构，析构函数。
+2. dereference 间接访问
