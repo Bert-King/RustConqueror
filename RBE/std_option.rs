@@ -3,7 +3,7 @@
  * @version: 
  * @Date: 2020-08-25 15:17:22
  * @LastEditors: BertKing
- * @LastEditTime: 2020-08-25 15:36:53
+ * @LastEditTime: 2020-08-25 15:40:21
  * @FilePath: /RustConqueror/RBE/std_option.rs
  * @Description: Rust标准库中的Option(选项)
  * 有时候发生错误时，最好的方法是抓住程序的某些失败部分，而不是直接抛出panic!.这就是枚举Option的用武之地。
@@ -12,6 +12,9 @@
  * Option<T> 枚举有两个变量：
  * 1. > None -> 预示着失败或者缺乏值(failure or lack of value)
  * 2. > Some(value) -> 包裹着T的value的元组结构
+ * 
+ * 
+ * 要想真正体会到枚举Option<T>的用处，首先要搞明白Rust的panic!
  * 
  */
 
