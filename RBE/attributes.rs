@@ -3,7 +3,7 @@
  * @version: 
  * @Date: 2020-08-26 15:45:47
  * @LastEditors: BertKing
- * @LastEditTime: 2020-08-26 16:26:56
+ * @LastEditTime: 2020-08-26 17:52:09
  * @FilePath: /RustConqueror/RBE/attributes.rs
  * @Description: Rust中的属性Attributes
  * 
@@ -35,14 +35,37 @@
  * 
  * ---------------------------------------------------------------
  * 实战环节:
+ * #[allow(dead_code)] 用来禁止 dead_code(无效代码) lint。
+ * Note that in real programs,you should eliminate dead code. 在实际项目中，我们应该尽可能地消除无效代码。
+ * 
+ * 
+ * Crate中的属性：
+ * 1. crate_type : 告知编译器该crate是二进制文件 OR 库文件(甚至是库的类型)
+ * 2. crate_name : 设置crate的名称
+ * 
+ * However,it is important to note that both the crate_type and crate_name attributes have no effect whatsoever when using Cargo,the Rust package manager.
+ * (但是需要我们注意的是，crate_type和crate_name属性在使用Cargo-Rust的包管理工具时没有任何效果的.由于Cargo被大量用于Rust的项目，这就意味着这两个属性在现实世界中很少能用上。) 
+ * 
+ * 另外需要注意的是，当使用crate_type属性时，使用rustc编译就不需要添加 --crate-type标志啦。
+ * 
  */
+
+ // 指定该Crate为库，且名称为attr.最后编译后的将会生成libattr.lib文件
+ #![crate_type = "lib"]
+ #![crate_name = "attr"]  
+
+
 
  fn used_function(){
      println!("This is a used function...");
  }
 
  /**
-  * warning: function is never used: `unused_function`
+  * warning: function is never used
+  * warning: unused variable
+  * 上面的警告，大家都不陌生。这是编译器提供的dead_code lint.
+  * 我们可以使用属性#[allow(dead_code)] 来禁止这个lint。
+  * 
   */
  #[allow(dead_code)]
  fn unused_function(){
