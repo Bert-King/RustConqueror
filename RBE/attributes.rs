@@ -3,7 +3,7 @@
  * @version: 
  * @Date: 2020-08-26 15:45:47
  * @LastEditors: BertKing
- * @LastEditTime: 2020-08-26 17:52:09
+ * @LastEditTime: 2020-08-26 21:01:07
  * @FilePath: /RustConqueror/RBE/attributes.rs
  * @Description: Rust中的属性Attributes
  * 
@@ -48,11 +48,19 @@
  * 
  * 另外需要注意的是，当使用crate_type属性时，使用rustc编译就不需要添加 --crate-type标志啦。
  * 
+ * 
+ * 3.cfg (Configuation的缩写),缩写在Rust中是一大特色。
+ * 
+ * 配置条件检查可以通过两种方式：
+ * 1. cfg属性: 属性：#[cfg(...)]
+ * 2. cfg!宏: 布尔表达式cfg!(...)
+ * 
+ * 
  */
 
  // 指定该Crate为库，且名称为attr.最后编译后的将会生成libattr.lib文件
- #![crate_type = "lib"]
- #![crate_name = "attr"]  
+ //#![crate_type = "lib"]
+ //#![crate_name = "attr"]  
 
 
 
@@ -72,7 +80,33 @@
      
  }
 
+
+/**
+ * 只有当目标系统是Linux时才会被编译
+ */
+#[cfg(target_os = "linux")]
+fn running_on_linux(){
+    println!("You are running linux!");
+}
+
+/**
+ * 当目标操作系统是非Linux时才会被编译
+ */
+#[cfg(not(target_os = "linux"))]
+fn running_on_non_linex(){
+    println!("You are not running linux!");
+}
+
+
  fn main(){
      let v = 1i32;
-     used_function();
+    used_function();
+
+     println!("Are you sure?");
+
+     if cfg!(target_os = "linux"){
+         println!("Yes.It's definitely linux!")
+     }else {
+         println!("Yes.It's definitely not linux!");
+     }
  }
