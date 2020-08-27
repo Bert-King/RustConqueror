@@ -3,7 +3,7 @@
  * @version: 
  * @Date: 2020-08-26 15:45:47
  * @LastEditors: BertKing
- * @LastEditTime: 2020-08-26 21:01:07
+ * @LastEditTime: 2020-08-27 11:16:24
  * @FilePath: /RustConqueror/RBE/attributes.rs
  * @Description: Rust中的属性Attributes
  * 
@@ -54,6 +54,8 @@
  * 配置条件检查可以通过两种方式：
  * 1. cfg属性: 属性：#[cfg(...)]
  * 2. cfg!宏: 布尔表达式cfg!(...)
+ * 如: #cfg(target_os = "linux") 是由rustc提供的。
+ * 我们也可以自定义cfg.但是必须通过rustc --cfg ...
  * 
  * 
  */
@@ -63,6 +65,10 @@
  //#![crate_name = "attr"]  
 
 
+#[cfg(some_condition)]
+ fn conditinal_function(){
+     println!("Condition met!...");
+ }
 
  fn used_function(){
      println!("This is a used function...");
